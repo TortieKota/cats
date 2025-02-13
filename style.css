@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    cursor: url('kisspng-computer-mouse-cursor-pointer-computer-icons-apple-cursor-5b5ccb0df064f8.8295033915328079499847.png'), auto;
+}
+
+body {
+    display: flexbox;
+    align-items: 100vh;
+    width: 100%;
+    font-family: monospace;
+    background-color: #d8e2dc;
+}
+
+.container0 {
+    display: flex;
+    justify-content: center;
+    align-items: 100vh;
+}
+
+.wrap {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50px;
+    z-index: 0;
+    animation: up 5s linear infinite;
+}
+
+.message {
+    text-align: center;
+    animation: scale 2s linear infinite;
+    margin: 100px;
+    color: #4a4355;
+}
+
+@keyframes up {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+.behind {
+    top: 260px;
+    height: 300px;
+    width: 500px;
+    background-color: #a85d5d;
+    position: absolute;
+    z-index: 0;
+}
+
+.letter-inside {
+    position: absolute;
+    width: 490px;
+    height: 280px;
+    top: 270px;
+    background-color: #f8edeb;
+    border-radius: 5px;
+    z-index: 1;
+    transition: 1.5s;
+}
+
+.letter-inside::before {
+    content: "";
+    position: absolute;
+    border: 3px solid #ffdab9;
+    border-style: dotted;
+    width: 460px;
+    height: 250px;
+    left: 12px;
+    top: 12px;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 50px;
+    color: #4a4355;
+}
+
+.kikster {
+    margin-left: 200px;
+}
+
+.front-envelope {
+    position: absolute;
+    top: 260px;
+    border-top: 150px solid transparent;
+    border-right: 250px solid #f4978e;
+    border-bottom: 150px solid #f8ad9d;
+    border-left: 250px solid #f8ad9d;
+    z-index: 3;
+}
+
+.cover {
+    position: absolute;
+    border-right: 250px solid transparent;
+    border-bottom: 200px solid transparent;
+    border-left: 250px solid transparent;
+    transform-origin: top;
+    transition: transform 0.75s linear;
+    z-index: 10;
+}
+
+/* when envelope opens */
+.cover.one {
+    border-top: 200px solid #f08080;
+    top: 260px;
+    transform: rotateX(0deg);
+    z-index: 3;
+    transition-delay: 1.25s;
+}
+
+/* when envelope closes */
+.cover.two {
+    border-top: 200px solid #bd6d6d;
+    top: 260px;
+    transform: rotateX(90deg);
+    z-index: 1;
+    transition-delay: 0.5s;
+}
+
+.wrap:hover .cover.one {
+    transform: rotateX(90deg);
+    transition-delay: 0.5s;
+}
+
+.wrap:hover .cover.two {
+    transform: rotateX(180deg);
+    transition-delay: 1.25s;
+}
+
+/* letter up and down aniation */
+.wrap:hover .letter-inside {
+    transform: translateY(-200px);
+    transition-delay: 1.5s;
+}
+
+/* animation hearts */
+.wrap:hover .hearts.one {
+    display: inline-block;
+    animation: heart 1s linear infinite;
+    animation-delay: 2s;
+}
+
+.wrap:hover .hearts.two {
+    display: inline-block;
+    animation: heart 2s linear infinite;
+    animation-delay: 2s;
+}
+
+.wrap:hover .hearts.three {
+    display: inline-block;
+    animation: heart 1.5s linear infinite;
+    animation-delay: 2s;
+}
+
+.wrap:hover .hearts.four {
+    display: inline-block;
+    animation: heart 2.4s linear infinite;
+    animation-delay: 2s;
+}
+
+.wrap:hover .hearts.five {
+    display: inline-block;
+    animation: heart 1.7s linear infinite;
+    animation-delay: 2s;
+}
+
+.wrap:hover .hearts.six {
+    display: inline-block;
+    animation: heart 1.29s linear infinite;
+    animation-delay: 2s;
+}
+
+
+.hearts {
+    display: inline-block;
+    z-index: 2;
+    background-color: red;
+    height: 10px;
+    width: 10px;
+    margin: 0 10px;
+    position: relative;
+    transform: rotate(-45deg);
+    top: 390px;
+    left: 20px;
+    margin-right: 50px;
+}
+
+.hearts::after,
+.hearts::before {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+}
+
+.hearts::before {
+    top: -5px;
+    left: 0;
+}
+
+.hearts:after {
+    left: 5px;
+}
+
+@keyframes heart {
+    0% {
+        transform: translateY(0) rotate(-45deg) scale(0.3);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-150px) rotate(-45deg) scale(1.3);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(-250px) rotate(-45deg) scale(2);
+        opacity: 0;
+    }
+}
+
+.shadows {
+    position: absolute;
+    width: 400px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgba(138, 106, 114, 0.3);
+    top: 650px;
+    z-index: 100;
+    animation: scale 5s linear infinite;
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(0.85);
+    }
+}
+
+.cat * {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cat,
+.ears,
+.eyes {
+    position: relative;
+}
+
+.head {
+    background-color: rgb(243, 245, 231);
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.cat {
+    top: -150px;
+    left: -150px;
+    filter: drop-shadow(4px 4px 1.5px rgb(218, 147, 147));
+}
+
+.head {
+    width: 100px;
+    height: 80px;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+.ears {
+    top: -20px;
+    z-index: -100;
+}
+
+.ear {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid rgb(233, 232, 218);
+}
+
+.ear.left {
+    transform: rotate(-20deg) translateX(-10px);
+    animation: airplane-left 7s infinite;
+}
+
+.ear.right {
+    transform: translateX(-3px);
+    animation: airplane-right 6s infinite;
+}
+
+.eyes {
+    top: -18px;
+    width: 55%;
+}
+
+.eye {
+    background-color: rgb(45, 144, 209);
+    width: 12px;
+    height: 16px;
+    border-radius: 50%;
+    animation: blink 5s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    10%,
+    50%,
+    90%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    20%,
+    30%,
+    95% {
+        transform: scaleY(0);
+    }
+}
+
+@keyframes airplane-right {
+
+    0%,
+    10%,
+    100% {
+        transform: rotate(30deg) translateX(18px);
+    }
+
+    50%,
+    90% {
+        transform: rotateY(30deg);
+    }
+}
+
+@keyframes airplane-left {
+
+    50%,
+    90% {
+        transform: rotate(-30deg) translateX(-18px);
+    }
+
+    0%,
+    20%,
+    60%,
+    100% {
+        transform: rotateY(-30deg);
+    }
+}
